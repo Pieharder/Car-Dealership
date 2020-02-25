@@ -49,10 +49,17 @@ public class Program
         CarsMatchingSearch.Add(automobile);
       }
     }
-    foreach(Car automobile in CarsMatchingSearch)
+    if(CarsMatchingSearch.Count > 0)
     {
-      Console.WriteLine(automobile.MakeModel);
-      Console.WriteLine(automobile.Description);
+      foreach(Car automobile in CarsMatchingSearch)
+      {
+        Console.WriteLine(automobile.MakeModel);
+        Console.WriteLine(automobile.Description);
+      }
+    }
+    else
+    {
+      Console.WriteLine("Sorry, no cars matched your search. Be less picky...");
     }
   }
 }
